@@ -16,18 +16,6 @@ const Foods = () => {
     const lunch = [];
     const dinner = [];
 
-    // foods.map(food => {
-    //     if(food.category === 'breakfast'){
-    //         breakfast.push(food);
-    //     }
-    //     else if(food.category === 'lunch'){
-    //         lunch.push(food);
-    //     }
-    //     else{
-    //         dinner.push(food);
-    //     }
-    // });
-
     foods.forEach(food => {
         if(food.category === 'breakfast'){
             breakfast.push(food);
@@ -56,6 +44,7 @@ const Foods = () => {
         }
     }
 
+
     return (
         <>
             <div className='my-5' >
@@ -72,12 +61,13 @@ const Foods = () => {
                 </ul>
             </div>
             <div className="foods-container">
-                {
-                    meals.map(food => <Food
+                {meals.length ? meals.map(food => <Food
                         key={food.id}
                         food={food}
-                    ></Food>)
-                }
+                    ></Food>) : foods.map(food => <Food
+                        key={food.id}
+                        food={food}
+                    ></Food>)}
             </div>
         </>
     );
