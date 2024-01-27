@@ -50,7 +50,7 @@ const Foods = () => {
             <div className='my-5' >
                 <ul className="nav justify-content-center">
                     <li className="nav-item me-2">
-                        <button id='breakfast-btn' className="nav-link fw-medium" onClick={()=>pushFoods('b')} onLoad={() => pushFoods('b')}>Breakfast</button>
+                        <button id='breakfast-btn' className="nav-link fw-medium" onClick={()=>pushFoods('b')}>Breakfast</button>
                     </li>
                     <li className="nav-item me-2">
                         <button id='lunch-btn' className="nav-link fw-medium" onClick={()=>pushFoods('l')}>Lunch</button>
