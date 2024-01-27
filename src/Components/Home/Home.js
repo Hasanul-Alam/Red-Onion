@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import footerLogo from '../../images/logo.png';
+import Foods from '../Foods/Foods';
 
 const Home = () => {
     return (
@@ -17,60 +18,9 @@ const Home = () => {
             </div>
 
             {/* Small Menu Part */}
-            <div className='my-5'>
-                <ul className="nav justify-content-center">
-                    <li className="nav-item me-2">
-                        <a className="nav-link text-dark fw-medium" aria-current="page" href="/">Breakfast</a>
-                    </li>
-                    <li className="nav-item me-2">
-                        <a className="nav-link text-dark fw-medium" href="/">Lunch</a>
-                    </li>
-                    <li className="nav-item me-2">
-                        <a className="nav-link text-dark fw-medium" href="/">Dinner</a>
-                    </li>
-                </ul>
-            </div>
+            
 
-            {/* Foods Part */}
-            <div className="row row-cols-1 row-cols-md-3 g-4 small-width my-5">
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button className="btn btn-danger text-light my-5">Checkout Your Food</button>
+            <Foods></Foods>
 
             {/* Why choose us section */}
             <div className="small-width mb-5">

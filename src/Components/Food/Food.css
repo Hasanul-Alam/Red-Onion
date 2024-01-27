@@ -1,0 +1,10 @@
+
+.card-style{
+    margin: auto;
+}
+@media only screen and (max-width: 639px) and (-Webkit-min-device-pixel-ratio: 1.5){
+    .card-style{
+        width: 100%;
+        margin: auto;
+    }
+}
