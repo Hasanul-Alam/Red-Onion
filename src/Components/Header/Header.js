@@ -3,9 +3,11 @@ import './Header.css';
 import logo from '../../images/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
+    const {user, logOut} = useAuth();
     return (
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid small-width">
@@ -23,9 +25,11 @@ const Header = () => {
                                 <li className="nav-item mx-2">
                                     <NavLink className="nav-link active login" aria-current="page" to="/cart"><FontAwesomeIcon icon={faCartShopping} /></NavLink>
                                 </li>
-                                <li className="nav-item mx-2">
+                                {user.email ? <li className="nav-item mx-2">
+                                    <Link to='/home' onClick={logOut} className="nav-link active login" aria-current="page">Logout</Link>
+                                </li> : <li className="nav-item mx-2">
                                     <NavLink className="nav-link active login" aria-current="page" to="/login">Login</NavLink>
-                                </li>
+                                </li>}
                                 <li className="nav-item mx-2">
                                     <NavLink className="nav-link" to="/sign-up"><button className='btn btn-danger rounded-pill'>Sign Up</button></NavLink>
                                 </li>

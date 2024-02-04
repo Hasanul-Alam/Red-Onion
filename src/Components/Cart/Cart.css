@@ -1,0 +1,11 @@
+.background-color{
+    background-color: rgb(247, 242, 242);
+}
+.form-width{
+    width: 75%;
+}
+@media all and (max-width: 767px){
+    .form-width{
+        width: 100%;
+    }
+}
